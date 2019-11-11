@@ -8,6 +8,7 @@
     <p>There are {{catLength}} categories.</p>
     <h5>Create an Event, {{userName}}</h5>
     <h5>Counter</h5>
+    <button @click="decrementCount">Decrement -1</button>
     <button @click="incrementCount">Increment +1</button>
     <span class="counter">{{count}}</span>
   </div>
@@ -17,7 +18,7 @@
 export default {
   computed: {
     userName() {
-      return this.$store.state.user.name;
+      return this.$store.state.user.user.name;
     },
     categories() {
       return this.$store.state.categories;
@@ -32,6 +33,9 @@ export default {
   methods: {
     incrementCount() {
       this.$store.commit("INCREMENT_COUNT");
+    },
+    decrementCount() {
+      this.$store.commit("DECREMENT_COUNT");
     }
   }
 };

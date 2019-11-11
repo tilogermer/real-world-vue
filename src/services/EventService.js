@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "https://my-json-server.typicode.com/tilogermer/real-world-nuxt",
+  baseURL: "https://my-json-server.typicode.com/tilogermer/real-world-vue",
   withCredentials: false,
   headers: {
     Accept: "application/json",
